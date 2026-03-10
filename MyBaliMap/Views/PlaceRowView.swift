@@ -31,11 +31,19 @@ struct PlaceRowView: View {
                 Text(place.name.isEmpty ? "Unnamed Place" : place.name)
                     .font(.headline)
 
-                Text(place.note)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                    .lineLimit(1)
-                    .truncationMode(.tail)
+                // #15: Fallback when note is empty
+                if place.note.trimmingCharacters(in: .whitespaces).isEmpty {
+                    Text("No note")
+                        .font(.subheadline)
+                        .foregroundStyle(.tertiary)
+                        .lineLimit(1)
+                } else {
+                    Text(place.note)
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
+                }
 
                 // TODO: Phase 5 — Distance from user
                 if let distance = formattedDistance {

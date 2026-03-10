@@ -245,6 +245,7 @@ struct MapScreen: View {
                         .font(.caption)
                         .foregroundStyle(.tertiary)
                         .monospacedDigit()
+                        .opacity(placeNote.isEmpty ? 0 : 1)  // Hide counter when empty
                 }
                 .padding(.vertical, 12)
                 .padding(.horizontal, 16)
@@ -329,7 +330,7 @@ struct MapScreen: View {
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 14)
             }
-            .buttonStyle(.borderedProminent)
+            .buttonStyle(.bordered)
             .tint(isEnabled ? .blue : Color(.systemGray4))
             .disabled(!isEnabled)
             .clipShape(Capsule())
@@ -406,7 +407,7 @@ struct MapScreen: View {
         isSaving = true
 
         let place = Place(
-            name: placeName,
+            name: placeName.trimmingCharacters(in: .whitespaces),  // #13: Trim whitespace
             note: placeNote,
             categoryId: categoryId,
             latitude: coordinate.latitude,

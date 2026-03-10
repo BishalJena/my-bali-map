@@ -1,20 +1,32 @@
 [
-    {
-        "id": "A1B2C3D4-E5F6-7890-ABCD-EF1234567890",
-        "name": "Eateries",
-        "iconName": "fork.knife",
-        "colorHex": "#FF6B6B"
-    },
-    {
-        "id": "B2C3D4E5-F6A7-8901-BCDE-F12345678901",
-        "name": "Shopping",
-        "iconName": "bag.fill",
-        "colorHex": "#4ECDC4"
-    },
-    {
-        "id": "C3D4E5F6-A7B8-9012-CDEF-123456789012",
-        "name": "Viewpoints",
-        "iconName": "binoculars.fill",
-        "colorHex": "#45B7D1"
-    }
+  {
+    "id": "A1B2C3D4-E5F6-7890-ABCD-EF1234567890",
+    "name": "Shop",
+    "iconName": "bag.fill",
+    "colorHex": "#4ECDC4"
+  },
+  {
+    "id": "B2C3D4E5-F6A7-8901-BCDE-F12345678901",
+    "name": "Views",
+    "iconName": "binoculars.fill",
+    "colorHex": "#45B7D1"
+  },
+  {
+    "id": "C3D4E5F6-A7B8-9012-CDEF-123456789012",
+    "name": "Food",
+    "iconName": "fork.knife",
+    "colorHex": "#FF6B6B"
+  },
+  {
+    "id": "D4E5F6A7-B8C9-0123-DEFA-234567890123",
+    "name": "Turf",
+    "iconName": "figure.surfing",
+    "colorHex": "#96CEB4"
+  },
+  {
+    "id": "E5F6A7B8-C9D0-1234-EFAB-345678901234",
+    "name": "Pubs",
+    "iconName": "cup.and.saucer.fill",
+    "colorHex": "#DDA0DD"
+  }
 ]
